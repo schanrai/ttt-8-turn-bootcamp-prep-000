@@ -15,9 +15,7 @@ def move(board, input_to_index, character = "X")
   board[input_to_index] = character
 end 
 
-def turn(board)
-  puts "Please enter 1-9:"
-end
+
 
 def valid_move?(board, input_to_index)
   if (input_to_index.between?(0,8) == true && !position_taken?(board, input_to_index) == true)
@@ -35,3 +33,8 @@ def position_taken?(board, input_to_index)
     return true
   end
 end  
+# turn will repeat loop to ask for input until condition of valid move = true
+
+def turn(board)
+  puts "Please enter 1-9:"
+end
