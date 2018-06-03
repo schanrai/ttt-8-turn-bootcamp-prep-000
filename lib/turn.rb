@@ -43,5 +43,5 @@ def turn(board)
     move(board, input_to_index, character = "X")
     display_board(board)
    else turn(board) 
+  end
 end
-
