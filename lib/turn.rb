@@ -33,10 +33,13 @@ def position_taken?(board, input_to_index)
   end
 end  
 # turn will repeat loop to ask for input until condition of valid move = true
-#This method should accept a board, an index from the user (which was converted from their raw input with input_to_index), and a token to mark that position with (you can give that argument a default value of 'X'––we're not worrying about whose turn it is yet). The method should set the correct index value of that position within the board equal to the token.
+# Asking the user for their move by position 1-9.Receiving the user input.Convert position to an index.If the move is valid, make the move and display the board to the user.If the move is invalid, ask for a new move until a valid move is received.
 
 def turn(board)
   puts "Please enter 1-9:"
   input = gets.strip
   index = input_to_index(input)
+  if valid_move?(board, input_to_index)
+    move()
+    
 end
